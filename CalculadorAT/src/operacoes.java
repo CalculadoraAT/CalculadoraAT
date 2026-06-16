@@ -37,6 +37,11 @@ public class operacoes extends javax.swing.JFrame {
         });
 
         btnDiminuir.setText("Diminuir");
+        btnDiminuir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDiminuirActionPerformed(evt);
+            }
+        });
 
         btnMultiplicar.setText("Multiplicar");
 
@@ -119,6 +124,15 @@ public class operacoes extends javax.swing.JFrame {
              lblResultado.setText(Integer.toString(Resultado));
 
     }//GEN-LAST:event_btnSomarActionPerformed
+
+    private void btnDiminuirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDiminuirActionPerformed
+        int Num1 = Integer.valueOf(txtNum1.getText());
+        int Num2 = Integer.valueOf(txtNum2.getText());
+             
+        int Resultado = Num1-Num2;
+             
+        lblResultado.setText(Integer.toString(Resultado));        // TODO add your handling code here:
+    }//GEN-LAST:event_btnDiminuirActionPerformed
        
     public static void main(String args[]) {
 
