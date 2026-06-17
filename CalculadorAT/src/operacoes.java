@@ -51,6 +51,11 @@ public class operacoes extends javax.swing.JFrame {
         });
 
         btnDividir.setText("Dividir");
+        btnDividir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDividirActionPerformed(evt);
+            }
+        });
 
         lblNum1.setText("1ª Número :");
 
@@ -149,6 +154,15 @@ public class operacoes extends javax.swing.JFrame {
     
     lblResultado.setText(String.valueOf(resultado));
     }//GEN-LAST:event_btnMultiplicarActionPerformed
+
+    private void btnDividirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDividirActionPerformed
+    double num1 = Double.parseDouble(txtNum1.getText());
+    double num2 = Double.parseDouble(txtNum2.getText());
+    
+        double resultado = num1 / num2;
+    
+    lblResultado.setText(String.valueOf(resultado));
+    }//GEN-LAST:event_btnDividirActionPerformed
        
     public static void main(String args[]) {
 
