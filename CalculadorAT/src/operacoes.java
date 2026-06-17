@@ -44,6 +44,11 @@ public class operacoes extends javax.swing.JFrame {
         });
 
         btnMultiplicar.setText("Multiplicar");
+        btnMultiplicar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMultiplicarActionPerformed(evt);
+            }
+        });
 
         btnDividir.setText("Dividir");
 
@@ -77,16 +82,18 @@ public class operacoes extends javax.swing.JFrame {
                 .addComponent(txtNum1, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(290, 290, 290))
             .addGroup(layout.createSequentialGroup()
-                .addGap(68, 68, 68)
-                .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(29, 29, 29)
-                .addComponent(btnSomar)
-                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnDiminuir)
-                    .addComponent(lblResultado, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(68, 68, 68)
+                        .addComponent(jLabel1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(29, 29, 29)
+                        .addComponent(btnSomar)
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnDiminuir)
+                            .addComponent(lblResultado, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -133,6 +140,15 @@ public class operacoes extends javax.swing.JFrame {
              
         lblResultado.setText(Integer.toString(Resultado));        // TODO add your handling code here:
     }//GEN-LAST:event_btnDiminuirActionPerformed
+
+    private void btnMultiplicarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMultiplicarActionPerformed
+     double num1 = Double.parseDouble(txtNum1.getText());
+    double num2 = Double.parseDouble(txtNum2.getText());
+    
+        double resultado = num1 * num2;
+    
+    lblResultado.setText(String.valueOf(resultado));
+    }//GEN-LAST:event_btnMultiplicarActionPerformed
        
     public static void main(String args[]) {
 
